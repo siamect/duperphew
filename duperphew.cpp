@@ -45,8 +45,6 @@ int main(){
 	// Parallel execution using C++11 lambda.
 	typedef cv::Point3_<uint8_t> Pixel;
 	frame_out.forEach<Pixel>([frame, new_pos](Pixel &p, const int * position) -> void {
-		//cout << "Pixel at = "<< frame.at<Vec3b>(int(float (position[0])),position[1])[0] << endl;  
-		//if (position[1] > ) ;
 		p.x = frame.at<Vec3b>(position[0],new_pos[position[1]])[0];
 		p.y = frame.at<Vec3b>(position[0],new_pos[position[1]])[1];
 		p.z = frame.at<Vec3b>(position[0],new_pos[position[1]])[2];
