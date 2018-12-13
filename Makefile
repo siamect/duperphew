@@ -10,7 +10,7 @@ SOURCES		= $(wildcard ./*.cpp)
 
 OBJECTS		= $(SOURCES:.cpp=.o)
 
-EXECUTABLE = superview
+EXECUTABLE = duperphew
 
 all: $(SOURCES) $(EXECUTABLE)
 
