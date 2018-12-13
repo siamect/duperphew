@@ -3,8 +3,8 @@ CFLAGS 	= -c -Wall -O3  -I ./include/
 
 #Include Libs
 #include OpenCV
-CFLAGS 		+= $(shell pkg-config opencv libmodbus --cflags)
-LDFLAGS 	+= $(shell pkg-config opencv libmodbus --libs)
+CFLAGS 		+= $(shell pkg-config opencv --cflags)
+LDFLAGS 	+= $(shell pkg-config opencv --libs)
 
 SOURCES		= $(wildcard ./*.cpp)
 
