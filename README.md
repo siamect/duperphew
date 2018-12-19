@@ -1,17 +1,18 @@
-# duperphew
-1920x1440 to 2560x1440 stretch of a videoclip using OpenCV.
+# duperphew  
+1920x1440 to 2560x1440 stretch of a videoclip using OpenCV.  
   
-The stretch is only in horizontal direction and is based on projecting the image on a cylinder secton of plus minus 73 degrees.  
-The calculation is in the XL sheet and was exported to a csv file to get rid of the formulas and only get the values.  
-The columns that are not used were deleted and was inserted directly in the cpp file.  
+The stretch is only in horizontal direction and is based on projecting the image on a  
   
-Conclusion of the first test is that the stretch is too high in the edges but the result is anyway good for a first try.
- 
-It is started from the command line and expect a file named c.MP4 (1920x1440 30fps) to exist in the same folder.
-I will produce a file called outcpp.mp4.
+The pixel from the 1920 wide original comes by making this calculation where x is the column in the new 2560 wide image:  
+  
+(18821485518263.0*x^5)/401598620231335912189339500.0  
+- (132758679464694919.0*x^4)/401598620231335912189339500.0  
++ (3402878089027632059.0*x^3)/4897544149162633075479750.0  
+- (171993524775281717309.0*x^2)/489754414916263307547975.0  
++ (2524031576682848584635617.0*x)/4015986202313359121893395.0;  
+  
+  
 
-The stretching is like a projecting the image onto a cylinder.
+The program is started from the command line and expect a file named c.MP4 (1920x1440 30fps) to exist in the same folder.
+I will produce a file called outcpp.mp4.  
 
-I think it sucks that some of the GoPro cameras no longer have Superview and you have to buy the most expensive ones to get it.
-By using this program and further develop it you can get a similar effect without haveing Superview on you camera.
- 
