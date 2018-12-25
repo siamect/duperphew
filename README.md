@@ -1,4 +1,12 @@
 # duperphew  
+
+execute it with
+
+./dupwephew 1 20 3245
+
+This skips 1 minute and 20 seconds into the video and the infile is /home/martin/Videos/GOPR3245.MP4 and outfile is /home/martin/Videos/3245.mp4
+
+
 1920x1440 to 2560x1440 stretch of a videoclip using OpenCV.  
   
 The stretch is only in horizontal direction and is based on projecting the image on a  
